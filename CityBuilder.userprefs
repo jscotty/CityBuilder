@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\grid\Grid.cs">
+    <Files>
+      <File FileName="Assets\_scripts\grid\Grid.cs" Line="226" Column="9" />
+      <File FileName="Assets\_scripts\BuildType.cs" Line="9" Column="9" />
+      <File FileName="Assets\BuildNavigation.cs" Line="28" Column="24" />
+      <File FileName="Assets\_scripts\data\URL.cs" Line="9" Column="65" />
+      <File FileName="Assets\_scripts\ui\RegisterHandler.cs" Line="50" Column="3" />
+      <File FileName="Assets\_scripts\ui\MainMenuHandler.cs" Line="25" Column="6" />
+      <File FileName="Assets\_scripts\saveload\SaveLoadSerialized.cs" Line="9" Column="3" />
+      <File FileName="..\Ouya\Assets\Scripts\grid\Grid.cs" Line="169" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
