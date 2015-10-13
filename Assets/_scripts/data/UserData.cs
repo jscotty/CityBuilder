@@ -4,8 +4,10 @@ using System.Collections;
 [System.Serializable] 
 public class UserData {
 
-	public static string username;
-	public static string password;
+	public static string username = "";
+	public static string password = "";
+	
+	public static string visit_name;
 
 	private string _name;
 

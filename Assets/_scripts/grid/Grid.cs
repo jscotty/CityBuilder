@@ -48,7 +48,7 @@ public class Grid : MonoBehaviour {
 	};
 
 	void Awake(){
-		GenerateGrid();
+		StartCoroutine(GetGrid(UserData.username));
 	}
 
 	void Start(){
@@ -56,6 +56,7 @@ public class Grid : MonoBehaviour {
 	}
 
 	public void GenerateGrid(){
+		print("ey");
 		_build = false;
 		if (objBuild != null)
 			Destroy(objBuild);
@@ -221,7 +222,6 @@ public class Grid : MonoBehaviour {
 	}
 	
 	IEnumerator SendGrid(string grid) {
-		print(grid);
 		count = 0;
 		sendGrid_url = URL.SEND_GRID;
 		WWW www = new WWW(sendGrid_url + "?username=" + UserData.username + "&grid=" + grid);
@@ -229,6 +229,35 @@ public class Grid : MonoBehaviour {
 
 	}
 
+	IEnumerator GetGrid(string username) {
+		sendGrid_url = URL.GET_GRID;
+		WWW www = new WWW(sendGrid_url + "?username=" + username);
+		yield return www;
+
+		SetGrid(www.text);
+	}
+
+	void SetGrid(string grid){
+		if(grid != "false"){
+			int i = 0, j = 0, num = 1;
+			bool res;
+			foreach (var row in grid.Split(';')) {
+				foreach (var col in row.Trim().Split(',')) {
+					res = int.TryParse(col.Trim(), out num);
+					if(res)
+						gridList[i,j] = int.Parse(col.Trim());
+					j ++;
+					if(j >= width ){
+						j = 0;
+					}
+				}
+				i++;
+			}
+		}
+		GenerateGrid();
+
+	}
+	
 	public void isBuilding(){
 		_build = true;
 	}
